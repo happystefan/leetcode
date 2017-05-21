@@ -1,6 +1,6 @@
 package leetcode_go
 
-const maxint = (^0)>>1
+import "math"
 
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	sum := len(nums1)+len(nums2)
@@ -23,7 +23,7 @@ func findkth(nums1, nums2 []int, sz1, sz2, k int) float64 {
 		return min(nums1[sz1], nums2[sz2])
 	}
 
-	a, b := maxint, maxint
+	a, b := math.MaxInt32, math.MaxInt32
 	if sz1+k/2-1 < len(nums1) {
 		a = nums1[sz1+k/2-1]
 	}

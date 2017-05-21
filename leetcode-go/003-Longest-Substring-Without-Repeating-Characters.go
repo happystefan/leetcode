@@ -11,6 +11,7 @@ func lengthOfLongestSubstring(s string) int {
 	for l, r := 0, 0; r < len(s); r++ {
 		if _, exist := m[s[r]]; exist {
 			l = max(l, m[s[r]]+1)
+			//l =  m[s[r]]+1
 		}
 		m[s[r]] = r
 		lenz = max(lenz, r-l+1)
