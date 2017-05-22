@@ -6,7 +6,7 @@ func isPalindrome(x int) bool {
 		return false
 	}
 	y := 0
-	for x>0 {
+	for x > 0 {
 		y = y*10 + x%10
 		x /= 10
 	}

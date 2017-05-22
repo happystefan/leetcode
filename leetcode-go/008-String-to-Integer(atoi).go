@@ -12,18 +12,18 @@ func myAtoi(str string) int {
 		return 0
 	}
 	i := 0
-	if str[0]=='-' || str[0]=='+' {
-		if str[0]=='-' {
+	if str[0] == '-' || str[0] == '+' {
+		if str[0] == '-' {
 			sign = -1
 		}
-		if str[0]=='+' {
+		if str[0] == '+' {
 			sign = 1
 		}
 		i++
 	}
 
-	for ; i<len(str); i++ {
-		if '0'<=str[i] && str[i]<='9' {
+	for ; i < len(str); i++ {
+		if '0' <= str[i] && str[i] <= '9' {
 			num = num*10 + int64(str[i]-'0')
 			if sign*num > math.MaxInt32 {
 				return math.MaxInt32
@@ -32,8 +32,8 @@ func myAtoi(str string) int {
 				return math.MinInt32
 			}
 		} else { // if contains any invalid char, return
-			return int(sign*num)
+			return int(sign * num)
 		}
 	}
-	return int(sign*num)
+	return int(sign * num)
 }

@@ -20,7 +20,6 @@ func lengthOfLongestSubstring(s string) int {
 	return lenz
 }
 
-
 func max(a, b int) int {
 	if a > b {
 		return a

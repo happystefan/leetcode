@@ -4,12 +4,12 @@ func convert(s string, numRows int) string {
 	ss := []byte(s)
 	// NOTE: take care of the initialization here
 	res := make([][]byte, numRows)
-	for i:=0; i<numRows; i++ {
+	for i := 0; i < numRows; i++ {
 		res[i] = []byte{}
 	}
 
 	idx := 0
-	for idx<len(ss) {
+	for idx < len(ss) {
 		for i := 0; i < numRows && idx < len(ss); i++ { // vertically down
 			res[i] = append(res[i], ss[idx])
 			idx++
@@ -20,7 +20,7 @@ func convert(s string, numRows int) string {
 		}
 	}
 
-	for i:=1; i<numRows; i++ {
+	for i := 1; i < numRows; i++ {
 		res[0] = append(res[0], res[i]...)
 	}
 

@@ -3,11 +3,11 @@ package leetcode_go
 import "math"
 
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
-	sum := len(nums1)+len(nums2)
-	if sum%2 ==1 {
+	sum := len(nums1) + len(nums2)
+	if sum%2 == 1 {
 		return findkth(nums1, nums2, 0, 0, sum/2+1)
 	} else {
-		return (findkth(nums1, nums2, 0, 0, sum/2)+findkth(nums1, nums2, 0, 0, sum/2+1))/2
+		return (findkth(nums1, nums2, 0, 0, sum/2) + findkth(nums1, nums2, 0, 0, sum/2+1)) / 2
 	}
 	return 0
 }

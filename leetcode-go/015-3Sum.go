@@ -5,7 +5,7 @@ import "sort"
 func threeSum(nums []int) [][]int {
 	res := [][]int{}
 	sort.Ints(nums)
-	for i:=0; i<len(nums); i++ {
+	for i := 0; i < len(nums); i++ {
 		l, r := i+1, len(nums)-1
 		for l < r {
 			a, b, c := nums[i], nums[l], nums[r]
@@ -28,7 +28,7 @@ func threeSum(nums []int) [][]int {
 			}
 		}
 		// Processing duplicates of Number a
-		for i+1<len(nums) && nums[i+1]==nums[i] {
+		for i+1 < len(nums) && nums[i+1] == nums[i] {
 			i++
 		}
 	}
