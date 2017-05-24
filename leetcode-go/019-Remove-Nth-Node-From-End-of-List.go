@@ -9,9 +9,9 @@ package leetcode_go
  */
 
 func removeNthFromEnd(head *ListNode, n int) *ListNode {
-	h := &ListNode{Next:head}
+	h := &ListNode{Next: head}
 	l, r := h, h
-	for i:=0; i<n; i++ {
+	for i := 0; i < n; i++ {
 		r = r.Next
 	}
 	for r.Next != nil {

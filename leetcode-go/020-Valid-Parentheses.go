@@ -3,7 +3,7 @@ package leetcode_go
 func isValid(s string) bool {
 	stack := []byte{}
 	for i := range s {
-		if len(stack) > 0 && isMatch(stack[len(stack)-1], s[i]) {
+		if len(stack) > 0 && isParentheseMatch(stack[len(stack)-1], s[i]) {
 			stack = stack[0 : len(stack)-1]
 		} else {
 			stack = append(stack, s[i])
@@ -12,7 +12,7 @@ func isValid(s string) bool {
 	return len(stack) == 0
 }
 
-func isMatch(a, b byte) bool {
+func isParentheseMatch(a, b byte) bool {
 	if a == '(' && b == ')' || a == '{' && b == '}' || a == '[' && b == ']' {
 		return true
 	}

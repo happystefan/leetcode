@@ -1,5 +1,6 @@
 package leetcode_go
 
+/*
 // solution 1: dp
 func longestPalindrome(s string) string {
 	// NOTE: take care of the initialization here
@@ -37,7 +38,8 @@ Example: "xxxbcbxxxxxa", (x is random character, not all x are equal) now we
 4. do NOT check "xxxxxa" or any longer string because if "xxxxxa" is palindrome
    then "xxxx" got from cutting off the head and tail is also palindrome. It has
    length > 3 which is impossible.'
- */
+*/
+/*
 func longestPalindrome(s string) string {
 	res := ""
 	lenz := 0
@@ -67,3 +69,32 @@ func isPalindrome(s string, l, r int) bool {
 	}
 	return true
 }
+*/
+
+// solution 4: two pointer
+// TODO: runtime error
+var lenz, idx int
+
+func longestPalindrome(s string) string {
+	if len(s) < 2 {
+		return s
+	}
+	for i := 0; i < len(s)-1; i++ {
+		extend(s, i, i)
+		extend(s, i, i+1)
+	}
+	return s[idx : idx+lenz]
+}
+
+func extend(s string, l, r int) {
+	for l >= 0 && r < len(s) && s[l] == s[r] {
+		l--
+		r++
+	}
+	if r-l-1 > lenz {
+		lenz = r - l - 1
+		idx = l + 1
+	}
+}
+
+// TODO: solution 3: Manacher's Algorithm
