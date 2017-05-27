@@ -13,12 +13,11 @@ func longestValidParentheses(s string) int {
 	if len(stack) == 0 {
 		return len(s)
 	}
+
 	if stack[0] != 0 {
 		stack = append([]int{-1}, stack...)
 	}
-	if stack[len(stack)-1] != len(s)-1 {
-		stack = append(stack, len(s))
-	}
+	stack = append(stack, len(s))
 
 	ans := 0
 	for i := 0; i < len(stack)-1; i++ {
