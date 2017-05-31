@@ -8,13 +8,12 @@ import java.util.List;
 public class Q015_3Sum {
     public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
-
         List<List<Integer>> ans = new ArrayList<>();
-        for (int i = 0; i < nums.length-2; i++) {
-            int l = i+1;
-            int r = nums.length-1;
+        for (int i = 0; i < nums.length; i++) {
+            int a = nums[i];
+            int l = i+1, r = nums.length-1;
             while (l < r) {
-                int a = nums[i], b = nums[l], c = nums[r];
+                int b = nums[l], c = nums[r];
                 if (a+b+c < 0) {
                     l++;
                 } else if (a+b+c > 0) {
@@ -25,7 +24,7 @@ public class Q015_3Sum {
                     while (l < r && nums[r] == c) r--;
                 }
             }
-            while (i+1 < nums.length && nums[i+1] == nums[i]) i++;
+            while (i+1 < nums.length && nums[i+1] == a) i++;
         }
         return ans;
     }
