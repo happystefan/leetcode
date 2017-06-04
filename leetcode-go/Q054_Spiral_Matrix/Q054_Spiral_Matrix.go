@@ -7,27 +7,35 @@ func spiralOrder(matrix [][]int) []int {
 	}
 	rbeign, rend := 0, len(matrix)-1
 	cbegin, cend := 0, len(matrix[0])-1
-	for rbeign <= rend && cbegin <= cend {
+	for rbeign <= rend || cbegin <= cend {
 		// go right
-		for j := cbegin; j <= cend; j++ {
-			ans = append(ans, matrix[rbeign][j])
+		if rbeign <= rend {
+			for j := cbegin; j <= cend; j++ {
+				ans = append(ans, matrix[rbeign][j])
+			}
+			rbeign++
 		}
-		rbeign++
 		// go down
-		for i := rbeign; i <= rend; i++ {
-			ans = append(ans, matrix[i][cend])
+		if cbegin <= cend {
+			for i := rbeign; i <= rend; i++ {
+				ans = append(ans, matrix[i][cend])
+			}
+			cend--
 		}
-		cend--
 		// go left
-		for j := cend; j >= cbegin; j-- {
-			ans = append(ans, matrix[rend][j])
+		if rbeign <= rend {
+			for j := cend; j >= cbegin; j-- {
+				ans = append(ans, matrix[rend][j])
+			}
+			rend--
 		}
-		rend--
 		// go up
-		for i := rend; i >= rbeign; i-- {
-			ans = append(ans, matrix[i][cbegin])
+		if cbegin <= cend {
+			for i := rend; i >= rbeign; i-- {
+				ans = append(ans, matrix[i][cbegin])
+			}
+			cbegin++
 		}
-		cbegin++
 	}
 	return ans
 }
