@@ -1,11 +1,6 @@
-package main //Q039_Combination_Sum
-import (
-	//	"fmt"
-	//	"sort"
-	//	"reflect"
-	"fmt"
-	"sort"
-)
+package Q039_Combination_Sum
+
+import "sort"
 
 func combinationSum(candidates []int, target int) [][]int {
 	ans := [][]int{}
@@ -20,11 +15,9 @@ func dfs(ans *[][]int, candidates, combs []int, target int, begin int) {
 		return
 	}
 	for i := begin; i < len(candidates) && target >= candidates[i]; i++ {
-		dfs(ans, candidates, append(combs, candidates[i]), target-candidates[i], i)
-	}
-}
+		ncombs := make([]int, len(combs))
+		copy(ncombs, combs)
 
-func main() {
-	//combinationSum([]int{33,28,25,45,26,27,47,29,32,21,37,35,48,49,40,39,41,46,20,24,30,36,38,44,23,34}, 51)
-	fmt.Println(combinationSum([]int{1, 2}, 4))
+		dfs(ans, candidates, append(ncombs, candidates[i]), target-candidates[i], i)
+	}
 }
