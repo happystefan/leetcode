@@ -1,11 +1,6 @@
 package Q047_Permutations_II
 
-
-import (
-//	"sort"
-	"fmt"
-	"sort"
-)
+import "sort"
 
 func permuteUnique(nums []int) [][]int {
 	sort.Ints(nums)
@@ -29,18 +24,12 @@ func gao(ans *[][]int, perms []int, nums []int, visit []bool) {
 			continue
 		}
 		visit[i] = true
-		//perms =
-		gao(ans, append(perms, nums[i]), nums, visit)
-		visit[i] = false
-		//perms = perms[:len(perms)-1]
-		/*
-		for i+1 < len(nums) && nums[i+1] == nums[i] {
-			i++
-		}
-		*/
-	}
-}
 
-func main() {
-	permuteUnique([]int{1, 2, 3, 4})
+		// NOTE: take care of the memcopy here
+		nperms := make([]int, len(perms))
+		copy(nperms, perms)
+
+		gao(ans, append(nperms, nums[i]), nums, visit)
+		visit[i] = false
+	}
 }
