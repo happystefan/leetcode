@@ -4,13 +4,13 @@ import "strings"
 
 func isNumber(s string) bool {
 	s = strings.Trim(s, " ")
-
 	var dotSeen, eSeen, digitSeen, digitAfterE bool
-
 	for i, c := range s {
 		if c >= '0' && c <= '9' {
 			digitSeen = true
-			digitAfterE = true
+			if eSeen {
+				digitAfterE = true
+			}
 		} else if c == '.' {
 			if dotSeen || eSeen {
 				return false
@@ -30,5 +30,5 @@ func isNumber(s string) bool {
 			return false
 		}
 	}
-	return digitSeen && digitAfterE
+	return digitSeen && !eSeen || eSeen && digitAfterE
 }
