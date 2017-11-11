@@ -18,5 +18,5 @@ public class Q110_Balanced_Binary_Tree_B {
         if (Math.abs(lheight-rheight) > 1 || lheight == -1 || rheight == -1) return -1;
         return Math.max(lheight, rheight)+1;
     }
-    
+
 }
