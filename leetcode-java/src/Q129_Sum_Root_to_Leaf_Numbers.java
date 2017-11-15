@@ -1,5 +1,3 @@
-
-
 public class Q129_Sum_Root_to_Leaf_Numbers {
 
     public class TreeNode {
