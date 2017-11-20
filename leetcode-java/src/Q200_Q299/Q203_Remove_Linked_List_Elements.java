@@ -1,7 +1,5 @@
 package Q200_Q299;
 
-import java.util.List;
-
 public class Q203_Remove_Linked_List_Elements {
 
     public class ListNode {
