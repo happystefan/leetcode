@@ -11,16 +11,16 @@ public class Q241_Different_Ways_to_Add_Parentheses {
     public List<Integer> diffWaysToCompute(String input) {
         List<Integer> ans = new LinkedList<>();
         for (int i = 0; i < input.length(); i++) {
-            if (Character.isDigit(input.charAt(i))) {
-                continue;
-            }
-            List<Integer> parta = diffWaysToCompute(input.substring(0, i));
-            List<Integer> partb = diffWaysToCompute(input.substring(i+1));
-            for (int a : parta) {
-                for (int b : partb) {
-                    if (input.charAt(i) == '+') ans.add(a+b);
-                    if (input.charAt(i) == '-') ans.add(a-b);
-                    if (input.charAt(i) == '*') ans.add(a*b);
+            char c = input.charAt(i);
+            if (c == '+' || c == '-' || c == '*') {
+                List<Integer> part1 = diffWaysToCompute(input.substring(0, i));
+                List<Integer> part2 = diffWaysToCompute(input.substring(i+1));
+                for (int a : part1) {
+                    for (int b : part2) {
+                       if (c == '+') ans.add(a+b);
+                       if (c == '-') ans.add(a-b);
+                       if (c == '*') ans.add(a*b);
+                    }
                 }
             }
         }
