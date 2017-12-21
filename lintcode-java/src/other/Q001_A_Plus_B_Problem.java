@@ -1,3 +1,5 @@
+package other;
+
 /**
  * Created by mingqiangliang on 12/21/17.
  */
