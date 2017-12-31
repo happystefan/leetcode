@@ -14,5 +14,5 @@ public class Q280_Wiggle_Sort {
         nums[j] ^= nums[i];
         nums[i] ^= nums[j];
     }
-    
+
 }
