@@ -11,5 +11,5 @@ public class Q214_Shortest_Palindrome {
         }
         return r+s;
     }
-
+    
 }
