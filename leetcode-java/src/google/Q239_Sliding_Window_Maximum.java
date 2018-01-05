@@ -6,7 +6,6 @@ public class Q239_Sliding_Window_Maximum {
 
     public int[] maxSlidingWindow(int[] nums, int k) {
         if (nums == null || nums.length == 0) return new int[0];
-
         PriorityQueue<Integer> pqueue = new PriorityQueue<>((a, b) -> b - a);
         for (int i = 0; i < k; i++) {
             pqueue.add(nums[i]);
