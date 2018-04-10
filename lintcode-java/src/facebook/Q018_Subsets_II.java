@@ -17,6 +17,9 @@ public class Q018_Subsets_II {
     private void dfs(List<List<Integer>> result, List<Integer> list, int[] nums, int pos) {
         result.add(new ArrayList<>(list));
         for (int i = pos; i < nums.length; i++) {
+            if (i > pos && nums[i] == nums[i-1]) {
+                continue;
+            }
             list.add(nums[i]);
             dfs(result, list, nums, i+1);
             list.remove(list.size() - 1);
