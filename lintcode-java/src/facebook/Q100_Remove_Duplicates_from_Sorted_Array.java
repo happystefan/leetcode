@@ -3,6 +3,9 @@ package facebook;
 public class Q100_Remove_Duplicates_from_Sorted_Array {
 
     public int removeDuplicates(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
         int i = 0, j = 1;
         while (j < nums.length) {
             if (nums[j] == nums[i]) {
@@ -13,6 +16,5 @@ public class Q100_Remove_Duplicates_from_Sorted_Array {
         }
         return i;
     }
-
 
 }
