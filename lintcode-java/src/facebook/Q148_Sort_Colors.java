@@ -5,12 +5,12 @@ public class Q148_Sort_Colors {
     public void sortColors(int[] nums) {
         int i = 0, j = 0, k = nums.length-1;
         while (j <= k) {
+            while (i > j && j < nums.length) {
+                j++;
+            }
             if (nums[j] == 0) {
                 swap(nums, i, j);
                 i++;
-                while (i > j) {
-                    j++;
-                }
             } else if (nums[j] == 2) {
                 swap(nums, j, k);
                 k--;
