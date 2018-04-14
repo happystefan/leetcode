@@ -16,5 +16,5 @@ public class Q406_Minimum_Size_Subarray_Sum {
         }
         return result == Integer.MAX_VALUE ? -1 : result;
     }
-    
+
 }
