@@ -3,7 +3,7 @@
 - [ ] Warm Up
     - [x] POJ 1004
 	- [x] POJ 1207 
-	- [ ] POJ 1003
+	- [x] POJ 1003
 	- [ ] POJ 1316 
 	- [ ] POJ 2017 
 	- [ ] POJ 1953 
