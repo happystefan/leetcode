@@ -1,4 +1,4 @@
-# Progress
+# Progress Tracking
 
 - [ ] Warm Up
     - [ ] POJ 1004
@@ -160,18 +160,18 @@
 	- [ ] POJ 3083 Children of the Candy Corn
 
 - [ ] Prune
-    -[ ] POJ 2676 Sudoku
-	-[ ] POJ 1129 Channel Allocation
-	-[ ] POJ 2362 square
-	-[ ] POJ 1077 八数码
+    - [ ] POJ 2676 Sudoku
+	- [ ] POJ 1129 Channel Allocation
+	- [ ] POJ 2362 square
+	- [ ] POJ 1077 八数码
 
 - [ ] Shortest Path Algorithm (dijkstra, bellman-ford, floyd, heap+dijkstra)
-    - [] POJ 1860
-	- [] POJ 3259
-	- [] POJ 1062
-	- [] POJ 2253
-	- [] POJ 1125
-	- [] POJ 2240
+    - [ ] POJ 1860
+	- [ ] POJ 3259
+	- [ ] POJ 1062
+	- [ ] POJ 2253
+	- [ ] POJ 1125
+	- [ ] POJ 2240
 
 - [ ] Minimum Spanning Tree (prim, kruskal)
 	- [ ] POJ 1789
