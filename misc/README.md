@@ -101,10 +101,9 @@
     - [ ] ZOJ 1062
     
 - [ ] Binary Search Tree
-    - [ ] POJ 2255
-    - [ ] POJ 2352
-    - [ ] ZOJ 1700
-    - [ ] ZOJ 1062
+    - [ ] POJ 2371
+    - [ ] POJ 2418
+    - [ ] POJ 2503
     
 - [ ] Union Find
     - [ ] POJ 1182
