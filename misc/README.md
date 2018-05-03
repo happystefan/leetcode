@@ -44,7 +44,7 @@
 	- [ ] POJ 1328
 
 - [ ] Dynamic Progarmming
-	- [ ] POJ 1014
+	- [x] POJ 1014
 	- [ ] POJ 1579
 	- [ ] POJ 2081
 	- [ ] POJ 1953
@@ -95,7 +95,7 @@
     - [ ] ZOJ 2339
     
 - [ ] Binary Tree
-    - [ ] POJ 2255
+    - [x] POJ 2255
     - [ ] POJ 2352
     - [ ] ZOJ 1700
     - [ ] ZOJ 1062
