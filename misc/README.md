@@ -45,7 +45,7 @@
 
 - [ ] Dynamic Progarmming
 	- [x] POJ 1014
-	- [ ] POJ 1579
+	- [x] POJ 1579
 	- [ ] POJ 2081
 	- [ ] POJ 1953
 	- [ ] POJ 1458
