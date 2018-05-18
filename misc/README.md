@@ -51,7 +51,7 @@
 	- [x] POJ 1458
 	- [x] POJ 2250
 	- [x] POJ 1159(滚动数组优化)
-	- [ ] POJ 1080
+	- [x] POJ 1080
 	- [ ] POJ 2192
 	- [ ] POJ 3356
 	- [ ] POJ 1163
@@ -101,7 +101,7 @@
     - [ ] ZOJ 1062
     
 - [ ] Binary Search Tree
-    - [ ] POJ 2371
+    - [x] POJ 2371
     - [ ] POJ 2418
     - [ ] POJ 2503
     
