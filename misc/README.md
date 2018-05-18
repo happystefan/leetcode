@@ -102,7 +102,7 @@
     
 - [ ] Binary Search Tree
     - [x] POJ 2371
-    - [ ] POJ 2418
+    - [x] POJ 2418
     - [ ] POJ 2503
     
 - [ ] Union Find
