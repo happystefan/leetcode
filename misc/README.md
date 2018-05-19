@@ -173,7 +173,7 @@
 	- [ ] POJ 2240
 
 - [ ] Minimum Spanning Tree (prim, kruskal)
-	- [ ] POJ 1789
+	- [x] POJ 1789
 	- [ ] POJ 2485
 	- [ ] POJ 1258
 	- [ ] POJ 3026
