@@ -20,7 +20,7 @@
     - [x] POJ 1046
 	- [ ] POJ 1316
 	- [x] POJ 2785
-	- [ ] POJ 1753(点灯游戏)
+	- [x] POJ 1753
 	- [ ] POJ 2965
     
 - [ ] Simulation
@@ -145,7 +145,7 @@
 
 - [ ] BFS
 	- [ ] POJ 1915 Knight Moves 
-	- [ ] POJ 1753 Flip Game 
+	- [x] POJ 1753 Flip Game 
 	- [ ] POJ 1376 Robot
 	- [ ] POJ 3278 Catch That Cow 
 	- [ ] POJ 3126 Prime Path 
