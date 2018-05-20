@@ -144,7 +144,7 @@
  	- [ ] POJ 2663 
 
 - [ ] BFS
-	- [ ] POJ 1915 Knight Moves 
+	- [x] POJ 1915 Knight Moves 
 	- [x] POJ 1753 Flip Game 
 	- [ ] POJ 1376 Robot
 	- [ ] POJ 3278 Catch That Cow 
