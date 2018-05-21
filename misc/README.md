@@ -153,7 +153,7 @@
 	- [ ] POJ 3322 Bloxorz I
 
 - [ ] DFS 
-    - [ ] POJ 1111 Image Perimeters
+    - [ ] [WIP] POJ 1111 Image Perimeters
 	- [ ] POJ 1321 棋盘问题
 	- [ ] POJ 2488 A Knight's Journey
 	- [ ] POJ 3083 Children of the Candy Corn
