@@ -178,9 +178,9 @@
 	- [ ] POJ 1258
 	- [ ] POJ 3026
 
-- [ ] Topological Sort
+- [x] Topological Sort
     - [x] POJ 1094
-    - [ ] POJ 3687
+    - [x] POJ 3687
 
 - [ ] Maximum Matching of Bipartite Graph (Hungarian Algorithm)
     - [ ] POJ 1034
