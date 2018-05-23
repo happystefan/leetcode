@@ -106,10 +106,11 @@
     - [ ] POJ 2503
     
 - [ ] Union Find
-    - [ ] POJ 1182
+    - [x] POJ 1182
     - [ ] POJ 1611
     - [ ] POJ 1703
     - [ ] POJ 1988
+    - [ ] POJ 2524
     - [ ] ZOJ 3261
 
 - [ ] Trie tree
