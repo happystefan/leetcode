@@ -107,7 +107,7 @@
     
 - [ ] Union Find
     - [x] POJ 1182
-    - [ ] POJ 1611
+    - [x] POJ 1611
     - [ ] POJ 1703
     - [ ] POJ 1988
     - [ ] POJ 2524
