@@ -40,4 +40,5 @@ add_executable(misc
         poj_3687.cpp
         poj_1182.cpp
         poj_1611.cpp
-        poj_1703.cpp)
+        poj_1703.cpp
+        poj_1703_B.cpp)
