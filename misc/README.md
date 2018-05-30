@@ -108,7 +108,7 @@
 - [ ] Union Find
     - [x] POJ 1182
     - [x] POJ 1611
-    - [ ] POJ 1703
+    - [x] POJ 1703
     - [ ] POJ 1988
     - [ ] POJ 2524
     - [ ] ZOJ 3261
