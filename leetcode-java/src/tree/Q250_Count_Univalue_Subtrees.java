@@ -6,31 +6,12 @@ import java.util.Stack;
 
 public class Q250_Count_Univalue_Subtrees {
 
-    public static void main(String[] args) {
-        TreeNode root = new TreeNode(5);
-        root.left = new TreeNode(1);
-        root.left.left = new TreeNode(5);
-        root.left.right = new TreeNode(5);
-        root.right = new TreeNode(5);
-        root.right.right = new TreeNode(5);
-
-        Solution solution = new Solution();
-        int result = solution.countUnivalSubtrees(root);
-        System.out.println(result);
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
     }
-
-
-}
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
-}
-
-class Solution {
-
 
     public int countUnivalSubtrees(TreeNode root) {
         Map<TreeNode, Boolean> map = new HashMap<>();
@@ -63,3 +44,4 @@ class Solution {
     }
 
 }
+
