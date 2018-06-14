@@ -13,16 +13,13 @@ public class Q023_Merge_k_Sorted_Lists {
     }
 
     public ListNode mergeKLists(ListNode[] lists) {
-        PriorityQueue<ListNode> queue = new PriorityQueue<>(new Comparator<ListNode>() {
-            @Override
-            public int compare(ListNode o1, ListNode o2) {
-                if (o1.val < o2.val) {
-                    return -1;
-                } else if (o1.val == o2.val) {
-                    return 0;
-                } else {
-                    return 1;
-                }
+        PriorityQueue<ListNode> queue = new PriorityQueue<>((o1, o2) -> {
+            if (o1.val < o2.val) {
+                return -1;
+            } else if (o1.val == o2.val) {
+                return 0;
+            } else {
+                return 1;
             }
         });
 
