@@ -1,14 +1,14 @@
 package tree;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Q731_My_Calendar_II {
 
     class MyCalendarTwo {
 
-        List<int[]> cal = new LinkedList<>();
-        List<int[]> ovp = new LinkedList<>();
+        Set<int[]> cal = new HashSet<>();
+        Set<int[]> ovp = new HashSet<>();
         public MyCalendarTwo() {
 
         }
@@ -28,7 +28,7 @@ public class Q731_My_Calendar_II {
             return true;
         }
     }
-    
+
 /**
  * Your MyCalendarTwo object will be instantiated and called as such:
  * MyCalendarTwo obj = new MyCalendarTwo();
