@@ -14,12 +14,13 @@ public class Q450_Delete_Node_in_a_BST {
             return null;
         }
         if (root.val < key) {
-            return deleteNode(root.right, key);
+            root.right = deleteNode(root.right, key);
         } else if (root.val > key) {
-            return deleteNode(root.left, key);
+            root.left = deleteNode(root.left, key);
         } else {
-            return delete(root);
+            root = delete(root);
         }
+        return root;
     }
 
     private TreeNode delete(TreeNode root) {
@@ -47,6 +48,5 @@ public class Q450_Delete_Node_in_a_BST {
         succ.right = root.right;
         return succ;
     }
-
 
 }
