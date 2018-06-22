@@ -36,7 +36,7 @@ public class Q450_Delete_Node_in_a_BST {
         TreeNode succ = root.right;
         while (succ.left != null) {
             parent = succ;
-            succ = succ.next;
+            succ = succ.left;
         }
         if (succ == parent.right) {
             parent.right = succ.right;
