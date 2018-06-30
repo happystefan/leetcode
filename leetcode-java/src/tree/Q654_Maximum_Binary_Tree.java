@@ -2,6 +2,14 @@ package tree;
 
 public class Q654_Maximum_Binary_Tree {
 
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
+    }
+
+
     public TreeNode constructMaximumBinaryTree(int[] nums) {
         if (nums == null || nums.length == 0) {
             return null;

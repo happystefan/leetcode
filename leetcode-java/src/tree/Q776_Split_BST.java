@@ -2,6 +2,14 @@ package tree;
 
 public class Q776_Split_BST {
 
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
+    }
+
+
     public TreeNode[] splitBST(TreeNode root, int V) {
         if (root == null) {
             return new TreeNode[]{null, null};
