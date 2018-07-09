@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Q301_Remove_Invalid_Parentheses_B {
 
+    Set<String> visited = new HashSet<>();
     public List<String> removeInvalidParentheses(String s) {
         char[] ss = s.toCharArray();
         int l = 0, r = 0;
@@ -29,6 +30,9 @@ public class Q301_Remove_Invalid_Parentheses_B {
             result.add(str);
             return;
         }
+        if (visited.contains(str)) {
+            return;
+        }
         for (int i = pos; i < ss.length; i++) {
             if (ss[i] != '(' && ss[i] != ')') {
                 dfs(result, ss, str+ss[i], l, r, len, i+1);
@@ -45,6 +49,7 @@ public class Q301_Remove_Invalid_Parentheses_B {
                 }
             }
         }
+        visited.add(str);
     }
 
 }
