@@ -24,6 +24,9 @@ public class Q301_Remove_Invalid_Parentheses {
         for (int i = 0; i < ss.length; i++) {
             Set<String> tmp = new HashSet<>(set);
             for (String str : tmp) {
+                if (str.length() >= ss.length-l-r) {
+                    continue;
+                }
                 set.add(str+ss[i]);
             }
         }
