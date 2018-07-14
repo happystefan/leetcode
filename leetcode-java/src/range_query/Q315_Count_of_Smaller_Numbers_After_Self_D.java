@@ -11,7 +11,6 @@ public class Q315_Count_of_Smaller_Numbers_After_Self_D {
         Arrays.sort(sorted);
         int[] cnts = new int[nums.length+1];
         for (int i = nums.length-1; i >= 0; i--) {
-            System.out.println(lower_bound(sorted, nums[i]-1));
             result.add(0, query(cnts, lower_bound(sorted, nums[i])));
             update(cnts, lower_bound(sorted, nums[i]+1));
         }

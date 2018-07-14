@@ -10,58 +10,46 @@ public class Q327_Count_of_Range_Sum_D {
         for (int i = 0; i < nums.length; i++) {
             sums[i+1] = sums[i]+nums[i];
         }
-        long[] sorted = Arrays.copyOf(sums, sums.length);
-        int[] cnts = new int[sums.length+1];
+        BIT bit = new BIT(sums);
         int result = 0;
         for (long sum : sums) {
-            result += query(cnts, upper_bound(sorted, sum-lower))-query(cnts, lower_bound(sorted, sum-upper));
-            update(cnts, lower_bound(sorted, sum));
+            result += bit.query(sum-lower)-bit.query(sum-upper-1);
+            bit.update(sum);
         }
         return result;
     }
 
-    private int query(int[] cnts, int i) {
-        i += 1;
-        int result = 0;
-        while (i > 0) {
-            result += cnts[i];
-            i -= i&-i;
-        }
-        return result;
-    }
-
-    private void update(int[] cnts, int i) {
-        i += 1;
-        while (i < cnts.length) {
-            cnts[i]++;
-            i += i&-i;
-        }
-    }
-
-    private int lower_bound(long[] nums, long target) {
-        int l = 0, r = nums.length-1;
-        while (l <= r) {
-            int m = l + (r-l)/2;
-            if (nums[m] < target) {
-                l = m+1;
-            } else {
-                r = m-1;
+    class BIT {
+        Map<Long, Integer> map = new HashMap<>();
+        long min, max;
+        public BIT(long[] sums) {
+            min = Long.MAX_VALUE;
+            max = Long.MIN_VALUE;
+            for (long sum : sums) {
+                min = Math.min(min, sum);
+                max = Math.max(max, sum);
             }
         }
-        return l;
-    }
 
-    private int upper_bound(long[] nums, long target) {
-        int l = 0, r = nums.length-1;
-        while (l <= r) {
-            int m = l + (r-l)/2;
-            if (nums[m] <= target) {
-                l = m+1;
-            } else {
-                r = m-1;
+        private int query(long val) {
+            val = Math.min(max, val);
+            long i = val - min + 1;
+            int result = 0;
+            while (i > 0) {
+                result += map.getOrDefault(i, 0);
+                i -= i&-i;
+            }
+            return result;
+        }
+
+        private void update(long val) {
+            long i = val - min + 1;
+            while (i <= max-min+1) {
+                map.put(i, map.getOrDefault(i, 0)+1);
+                i += i&-i;
             }
         }
-        return l;
+
     }
 
 }
