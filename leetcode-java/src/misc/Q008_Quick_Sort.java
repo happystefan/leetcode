@@ -3,22 +3,38 @@ package misc;
 public class Q008_Quick_Sort {
 
     private int partition(int[] nums, int lo, int hi) {
-        /*
         int i = lo, j = hi, pivot = nums[hi];
         while (i < j)
             if (nums[i++] > pivot) swap(nums, --i, --j);
         swap(nums, i, hi);
         return i;
-        */
+        /* version 2:
         int i = lo, j = hi-1, pivot = nums[hi];
         while (i <= j) {
             if (nums[i] > pivot) {
-                swap(nums, i--, j--);
+                swap(nums, i, j);
+                j--;
+            } else {
+                i++;
             }
-            i++;
         }
         swap(nums, i, hi);
         return i;
+        */
+
+        /* version 3:
+        int i = lo, j = hi, pivot = nums[hi];
+        while (i < j) {
+            if (nums[i] > pivot) {
+                swap(nums, i, --j);
+            } else {
+                i++;
+            }
+        }
+        swap(nums, i, hi);
+        return i;
+        */
+
     }
 
     private void swap(int[] nums, int i, int j) {
@@ -41,4 +57,3 @@ public class Q008_Quick_Sort {
     }
 
 }
-
