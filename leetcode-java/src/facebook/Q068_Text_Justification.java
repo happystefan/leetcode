@@ -15,16 +15,17 @@ public class Q068_Text_Justification {
             }
             r--;
             if (width > maxWidth) {
-                width -= words[r].length();
-                if (r > l) width -= 1;
                 r--;
             }
 
+            width = 0;
+            for (int j = l; j <= r; j++) {
+                width += words[j].length();
+            }
             int wordNum = r-l+1;
-            int spaceNum = wordNum == 1 ? 0 : (maxWidth-width+(wordNum-1))/(wordNum-1);
-            int extraSpace = wordNum == 1 ? maxWidth-width : (maxWidth-width+(wordNum-1))%(wordNum-1);
+            int spaceNum = wordNum == 1 ? 0 : (maxWidth-width)/(wordNum-1);
+            int extraSpace = wordNum == 1 ?  maxWidth-width : (maxWidth-width)%(wordNum-1);
 
-            System.out.printf("%d %d\n", spaceNum, extraSpace);
             StringBuilder sb = new StringBuilder();
             if (r == words.length-1) { // last line
                 for (int j = l; j <= r; j++) {
@@ -36,21 +37,24 @@ public class Q068_Text_Justification {
                 }
             } else {
                 for (int j = l; j <= r; j++) {
-                    //if (j != l) sb.append(" ");
                     if (j != l) {
                         for (int k = 0; k < spaceNum; k++) {
                             sb.append(" ");
                         }
                     }
                     sb.append(words[j]);
-                    if (j == l) {
-                        for (int k = 0; k < extraSpace; k++) {
+                    if (l == r) {
+                        while (extraSpace-- > 0) {
                             sb.append(" ");
+                        }
+                    } else {
+                        if (extraSpace > 0) {
+                            sb.append(" ");
+                            extraSpace--;
                         }
                     }
                 }
             }
-            //System.out.println(sb.toString());
             result.add(sb.toString());
             i = r;
         }
