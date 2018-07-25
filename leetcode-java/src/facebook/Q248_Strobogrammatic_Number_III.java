@@ -2,16 +2,6 @@ package facebook;
 
 public class Q248_Strobogrammatic_Number_III {
 
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        solution.strobogrammaticInRange("100", "1000");
-    }
-
-
-}
-
-class Solution {
-
     public int strobogrammaticInRange(String low, String high) {
         if (low == null || high == null || low.length() == 0 || high.length() == 0 ||
                 low.length() > high.length() || low.length() == high.length() && low.compareTo(high) > 0) {
