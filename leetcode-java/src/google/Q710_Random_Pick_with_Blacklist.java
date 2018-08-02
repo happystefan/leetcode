@@ -3,7 +3,7 @@ package google;
 import java.util.*;
 
 public class Q710_Random_Pick_with_Blacklist {
-
+    // Memory Limit Exceeded
     class Solution {
         List<Integer> list;
         Random random;
