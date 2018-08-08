@@ -25,7 +25,7 @@ public class Q006_Lower_Bound_Upper_Bound {
                 r = m-1;
             }
         }
-        return l;
+        return r;
     }
-    
+
 }
