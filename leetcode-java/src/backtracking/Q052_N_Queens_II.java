@@ -16,6 +16,7 @@ public class Q052_N_Queens_II {
     private void dfs(int row, int n) {
         if (row == n) {
             result++;
+            return;
         }
         for (int col = 0; col < n; col++) {
             if (cols.contains(col)) {
