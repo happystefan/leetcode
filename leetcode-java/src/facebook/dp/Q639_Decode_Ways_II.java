@@ -1,4 +1,4 @@
-package facebook;
+package facebook.dp;
 
 public class Q639_Decode_Ways_II {
 

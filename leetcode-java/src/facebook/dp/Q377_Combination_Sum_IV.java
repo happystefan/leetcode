@@ -1,4 +1,4 @@
-package facebook;
+package facebook.dp;
 
 public class Q377_Combination_Sum_IV {
 

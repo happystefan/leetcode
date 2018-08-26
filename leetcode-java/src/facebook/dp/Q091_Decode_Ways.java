@@ -1,4 +1,4 @@
-package facebook;
+package facebook.dp;
 
 public class Q091_Decode_Ways {
 
