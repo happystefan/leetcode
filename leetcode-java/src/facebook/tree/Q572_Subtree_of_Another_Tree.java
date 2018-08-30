@@ -1,4 +1,4 @@
-package archive.tree;
+package facebook.tree;
 
 public class Q572_Subtree_of_Another_Tree {
 
@@ -10,7 +10,7 @@ public class Q572_Subtree_of_Another_Tree {
     }
 
     public boolean isSubtree(TreeNode s, TreeNode t) {
-        return isSameTree(s, t) || s != null && (isSubtree(s.left, t) || isSubtree(s.right, t));
+        return isSameTree(s, t) || isSubtree(s.left, t) || isSubtree(s.right, t);
     }
 
     private boolean isSameTree(TreeNode s, TreeNode t) {

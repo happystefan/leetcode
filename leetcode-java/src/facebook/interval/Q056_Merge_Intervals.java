@@ -1,4 +1,4 @@
-package facebook;
+package facebook.interval;
 
 import java.util.*;
 
