@@ -2,7 +2,7 @@ package archive.bfs_dfs;
 
 import java.util.*;
 
-public class Q865_Shortest_Path_to_Get_All_Keys {
+public class Q864_Shortest_Path_to_Get_All_Keys {
 
     private int[][] dirs = new int[][]{{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 

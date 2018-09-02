@@ -2,6 +2,12 @@ package archive.misc;
 
 public class Q008_Quick_Sort {
 
+    private void swap(int[] nums, int i, int j) {
+        int t = nums[i];
+        nums[i] = nums[j];
+        nums[j] = t;
+    }
+
     private int partition(int[] nums, int lo, int hi) {
         int i = lo, j = hi, pivot = nums[hi];
         while (i < j)
@@ -35,12 +41,6 @@ public class Q008_Quick_Sort {
         return i;
         */
 
-    }
-
-    private void swap(int[] nums, int i, int j) {
-        int t = nums[i];
-        nums[i] = nums[j];
-        nums[j] = t;
     }
 
     private void sort(int[] nums, int lo, int hi) {

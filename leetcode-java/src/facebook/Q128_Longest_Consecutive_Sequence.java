@@ -2,7 +2,7 @@ package facebook;
 
 import java.util.*;
 
-public class Q128_Longest_Consecutive_Sequence {
+public class  Q128_Longest_Consecutive_Sequence {
 
     public int longestConsecutive(int[] nums) {
         Set<Integer> set = new HashSet<>();
