@@ -18,6 +18,7 @@ public class Q056_Merge_Intervals {
             Interval interval = intervals.get(i);
             while (i+1 < intervals.size() && intervals.get(i+1).start <= interval.end) {
                 interval.end = Math.max(interval.end, intervals.get(i+1).end);
+                i++;
             }
             result.add(interval);
         }
