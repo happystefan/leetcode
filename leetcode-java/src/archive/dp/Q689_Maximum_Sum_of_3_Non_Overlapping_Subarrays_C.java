@@ -4,16 +4,6 @@ import java.util.Arrays;
 
 public class Q689_Maximum_Sum_of_3_Non_Overlapping_Subarrays_C {
 
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        int[] result = solution.maxSumOfThreeSubarrays(new int[]{1,2,1,2,6,7,5,1}, 2);
-        System.out.println(Arrays.toString(result));
-    }
-
-}
-
-class Solution {
-
     public int[] maxSumOfThreeSubarrays(int[] nums, int k) {
         int[] sums = new int[nums.length - k + 1];
         for (int i = 0; i < k; i++) {
@@ -49,13 +39,13 @@ class Solution {
                 /*
                 archive.dp[i][j] = Math.max(archive.dp[i-1][j-1], archive.dp[i-1][j-k]+sums[j]);
                 */
-                    if (dp[i - 1][j - k] + sums[j] > dp[i][j - 1]) {
-                        dp[i][j] = dp[i - 1][j - k] + sums[j];
-                        id[i][j] = j - k;
-                    } else {
-                        dp[i][j] = dp[i][j - 1];
-                        id[i][j] = id[i][j - 1];
-                    }
+                if (dp[i - 1][j - k] + sums[j] > dp[i][j - 1]) {
+                    dp[i][j] = dp[i - 1][j - k] + sums[j];
+                    id[i][j] = j - k;
+                } else {
+                    dp[i][j] = dp[i][j - 1];
+                    id[i][j] = id[i][j - 1];
+                }
 
 
             }
