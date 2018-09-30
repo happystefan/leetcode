@@ -1,4 +1,4 @@
-package facebook;
+package vmware;
 
 import java.util.*;
 
@@ -25,13 +25,9 @@ public class Q301_Remove_Invalid_Parentheses {
             return;
         }
         for (int i = pos; i < ss.length; i++) {
-            if (ss[i] == '(') {
-                dfs(set, str+ss[i], ss, len, l+1, r, i+1);
-            } else if (ss[i] == ')') {
-                if (l > r) dfs(set, str+ss[i], ss, len, l, r+1, i+1);
-            } else {
-                dfs(set, str+ss[i], ss, len, l, r, i+1);
-            }
+            if (ss[i] == '(' && l >= r) dfs(set, str+ss[i], ss, len, l+1, r, i+1);
+            else if (ss[i] == ')' && l > r) dfs(set, str+ss[i], ss, len, l, r+1, i+1);
+            else dfs(set, str+ss[i], ss, len, l, r, i+1);
         }
     }
 
