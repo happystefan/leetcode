@@ -1,0 +1,42 @@
+package Y2018.bfs_dfs;
+
+import java.util.Arrays;
+
+public class Q698_Partition_to_K_Equal_Sum_Subsets_B {
+
+    public boolean canPartitionKSubsets(int[] nums, int k) {
+        if (nums.length < k) {
+            return false;
+        }
+        int sum = Arrays.stream(nums).sum();
+        if (sum % k != 0) {
+            return false;
+        }
+        Arrays.sort(nums);
+        if (nums[nums.length - 1] > sum / k) {
+            return false;
+        }
+        return dfs(nums, new int[k], nums.length - 1, sum / k);
+    }
+
+    private boolean dfs(int[] nums, int[] sums, int pos, int target) {
+        if (pos < 0) {
+            return true;
+        }
+        for (int i = 0; i < sums.length; i++) {
+            if (sums[i] + nums[pos] > target) {
+                continue;
+            }
+            sums[i] += nums[pos];
+            if (dfs(nums, sums, pos - 1, target)) {
+                return true;
+            }
+            sums[i] -= nums[pos];
+            if (sums[i] == 0) {
+                break;
+            }
+        }
+        return false;
+    }
+
+}
