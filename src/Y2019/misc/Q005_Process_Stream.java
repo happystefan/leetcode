@@ -8,7 +8,13 @@ public class Q005_Process_Stream {
 
     String buffer = "";
 
-    // solution 1:
+    /*
+     *------------------------------------------------------------------------------------------------------------------
+     *
+     * solution 1
+     *
+     *------------------------------------------------------------------------------------------------------------------
+     */
     public void onDataArrive(byte[] chunk) {
         String str = new String(chunk);
         buffer += str;
@@ -20,8 +26,14 @@ public class Q005_Process_Stream {
         }
     }
 
-    // solution 2 (recursive):
-    public void onDataArriveRecursive(byte[] chunk) {
+    /*
+     *------------------------------------------------------------------------------------------------------------------
+     *
+     * solution 2: recursive
+     *
+     *------------------------------------------------------------------------------------------------------------------
+     */
+    public void onDataArrive_Recursive(byte[] chunk) {
         String str = new String(chunk);
         buffer += str;
         if (buffer.length() < 4) return;
@@ -30,7 +42,7 @@ public class Q005_Process_Stream {
         byte[] data = str.substring(4, 4 + len).getBytes();
         processData(data);
         buffer = buffer.substring(4 + len);
-        onDataArriveRecursive("".getBytes());
+        onDataArrive_Recursive("".getBytes());
     }
 
 }
