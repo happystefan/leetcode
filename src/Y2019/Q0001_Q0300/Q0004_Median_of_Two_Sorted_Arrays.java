@@ -1,6 +1,6 @@
-package Y2019.Q001_Q300;
+package Y2019.Q0001_Q0300;
 
-public class Q004_Median_of_Two_Sorted_Arrays {
+public class Q0004_Median_of_Two_Sorted_Arrays {
 
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int n = nums1.length + nums2.length;

@@ -3,7 +3,7 @@ package Y2019.misc;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Q001_Compress_Sequence {
+public class Q0001_Compress_Sequence {
     /*
     Given a monotone increasing array, compress all continuous part as [start, end], example:
     input: [1, 2, 3, 4, 5, 7, 8, 10, 11, 15]

@@ -1,8 +1,8 @@
-package Y2019.Q001_Q300;
+package Y2019.Q0001_Q0300;
 
 import java.util.HashMap;
 
-public class Q001_Two_Sum {
+public class Q0001_Two_Sum {
 
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();

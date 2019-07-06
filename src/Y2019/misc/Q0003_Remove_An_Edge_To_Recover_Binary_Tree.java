@@ -3,7 +3,7 @@ package Y2019.misc;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Q003_Remove_An_Edge_To_Recover_Binary_Tree {
+public class Q0003_Remove_An_Edge_To_Recover_Binary_Tree {
 
     class TreeNode {
         int val;

@@ -1,6 +1,6 @@
 package Y2019.misc;
 
-public class Q004_Remove_An_Edge_To_Recover_Binary_Search_Tree {
+public class Q0004_Remove_An_Edge_To_Recover_Binary_Search_Tree {
 
     class TreeNode {
         int val;

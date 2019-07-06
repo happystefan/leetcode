@@ -1,6 +1,6 @@
-package Y2019.Q001_Q300;
+package Y2019.Q0001_Q0300;
 
-public class Q005_Longest_Palindromic_Substring {
+public class Q0005_Longest_Palindromic_Substring {
 
     public String longestPalindrome(String s) {
         if (s == null || s.length() == 0) {

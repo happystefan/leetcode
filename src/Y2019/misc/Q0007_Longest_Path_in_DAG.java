@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class Q007_Longest_Path_in_DAG {
+public class Q0007_Longest_Path_in_DAG {
     /*
     329. Longest Increasing Path in a Matrix
     */

@@ -1,6 +1,6 @@
 package Y2019.misc;
 
-public class Q005_Process_Stream {
+public class Q0005_Process_Stream {
 
     private void processData(byte[] data) {
     }

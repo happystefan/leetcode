@@ -1,10 +1,10 @@
-package Y2019.Q001_Q300;
+package Y2019.Q0001_Q0300;
 
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class Q257_Binary_Tree_Paths {
+public class Q0257_Binary_Tree_Paths {
 
     class TreeNode {
         int val;

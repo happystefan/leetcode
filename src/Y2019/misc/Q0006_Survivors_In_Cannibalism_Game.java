@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class Q006_Survivors_In_Cannibalism_Game {
+public class Q0006_Survivors_In_Cannibalism_Game {
     /*
     Given an 2D board, count the smallest possible number of survivors when a cannibalism game end.
     Players are represented with ’*’s, empty slots are represented with ’.’s.

@@ -1,9 +1,9 @@
-package Y2019.Q001_Q300;
+package Y2019.Q0001_Q0300;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class Q003_Longest_Substring_Without_Repeating_Characters {
+public class Q0003_Longest_Substring_Without_Repeating_Characters {
 
     public int lengthOfLongestSubstring(String s) {
         char[] ss = s.toCharArray();

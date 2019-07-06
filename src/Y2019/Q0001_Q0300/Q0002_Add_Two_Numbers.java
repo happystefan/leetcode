@@ -1,6 +1,6 @@
-package Y2019.Q001_Q300;
+package Y2019.Q0001_Q0300;
 
-public class Q002_Add_Two_Numbers {
+public class Q0002_Add_Two_Numbers {
 
     public class ListNode {
         int val;
