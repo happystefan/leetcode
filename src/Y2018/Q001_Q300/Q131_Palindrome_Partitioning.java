@@ -18,7 +18,7 @@ public class Q131_Palindrome_Partitioning {
             ans.add(ll);
         }
         for (int i = 1; i < s.length(); i++) {
-            String s1 = s.substring(0, i), s2 = s.substring(i, s.length());
+            String s1 = s.substring(0, i), s2 = s.substring(i);
             if (isPalindrome(s1)) {
                 List<String> nlist = new LinkedList<>(list);
                 nlist.add(s1);

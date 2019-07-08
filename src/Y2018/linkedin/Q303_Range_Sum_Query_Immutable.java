@@ -4,7 +4,7 @@ public class Q303_Range_Sum_Query_Immutable {
 
     class NumArray {
 
-        int sums[];
+        int[] sums;
 
         public NumArray(int[] nums) {
             sums = nums;

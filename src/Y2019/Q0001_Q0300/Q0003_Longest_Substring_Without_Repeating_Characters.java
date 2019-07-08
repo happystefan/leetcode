@@ -15,7 +15,7 @@ public class Q0003_Longest_Substring_Without_Repeating_Characters {
                 set.remove(ss[l++]);
             }
             set.add(ss[r++]);
-            result = Math.max(result, r-l);
+            result = Math.max(result, r - l);
         }
         return result;
     }

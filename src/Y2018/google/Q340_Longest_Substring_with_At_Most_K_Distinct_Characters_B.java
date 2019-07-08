@@ -10,7 +10,7 @@ public class Q340_Longest_Substring_with_At_Most_K_Distinct_Characters_B {
         LinkedHashMap<Character, Integer> map = new LinkedHashMap<>();
         for (int h = 0; h < s.length(); h++) {
             char c = s.charAt(h);
-            if (map.containsKey(c)) map.remove(c);
+            map.remove(c);
             map.put(c, h);
             if (map.size() > k) {
                 char key = map.keySet().iterator().next();

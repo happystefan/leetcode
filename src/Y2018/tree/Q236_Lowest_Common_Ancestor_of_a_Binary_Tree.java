@@ -15,11 +15,7 @@ public class Q236_Lowest_Common_Ancestor_of_a_Binary_Tree {
             return root;
         } else if (l != null) {
             return l;
-        } else if (r != null) {
-            return r;
-        } else {
-            return null;
-        }
+        } else return r;
     }
 
     class TreeNode {

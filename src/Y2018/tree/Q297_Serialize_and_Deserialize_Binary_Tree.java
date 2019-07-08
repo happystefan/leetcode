@@ -9,7 +9,7 @@ public class Q297_Serialize_and_Deserialize_Binary_Tree {
         if (root == null) {
             return "#";
         }
-        return String.valueOf(root.val) + " " + serialize(root.left) + " " + serialize(root.right);
+        return root.val + " " + serialize(root.left) + " " + serialize(root.right);
     }
 
     // Decodes your encoded data to archive.tree.

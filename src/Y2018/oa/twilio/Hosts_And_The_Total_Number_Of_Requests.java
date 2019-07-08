@@ -11,7 +11,7 @@ public class Hosts_And_The_Total_Number_Of_Requests {
 
     private static final Scanner scan = new Scanner(System.in);
 
-    public static void main(String args[]) throws Exception {
+    public static void main(String[] args) throws Exception {
         // read the string filename
         String filename;
         filename = scan.nextLine();

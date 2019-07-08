@@ -12,10 +12,7 @@ public class Q112_Path_Sum {
         if (root.left != null && hasPathSum(root.left, sum - root.val)) {
             return true;
         }
-        if (root.right != null && hasPathSum(root.right, sum - root.val)) {
-            return true;
-        }
-        return false;
+        return root.right != null && hasPathSum(root.right, sum - root.val);
     }
 
     class TreeNode {

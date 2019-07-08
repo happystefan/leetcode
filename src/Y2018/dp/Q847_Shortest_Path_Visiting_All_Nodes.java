@@ -8,7 +8,7 @@ public class Q847_Shortest_Path_Visiting_All_Nodes {
 
     public int shortestPathLength(int[][] graph) {
         int n = graph.length;
-        int dp[][] = new int[n][1 << n];
+        int[][] dp = new int[n][1 << n];
         Queue<int[]> Q = new LinkedList<>();
         for (int i = 0; i < n; i++) {
             Arrays.fill(dp[i], Integer.MAX_VALUE);

@@ -7,7 +7,7 @@ public class Q516_Longest_Palindromic_Subsequence {
             return 0;
         }
         int len = s.length();
-        int dp[][] = new int[len][len];
+        int[][] dp = new int[len][len];
         for (int i = 0; i < len; i++) {
             dp[i][i] = 1;
             if (i + 1 < len) {

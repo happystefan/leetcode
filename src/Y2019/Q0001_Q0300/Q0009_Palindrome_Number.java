@@ -25,7 +25,7 @@ public class Q0009_Palindrome_Number {
         int xx = x;
         int yy = 0;
         while (x != 0) {
-            yy = yy * 10 + x %10;
+            yy = yy * 10 + x % 10;
             x /= 10;
         }
         return xx == yy;

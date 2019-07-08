@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Q493_Reverse_Pairs_B {
 
-    TreeNode buildTree(long nums[], int l, int r) {
+    TreeNode buildTree(long[] nums, int l, int r) {
         if (l > r) {
             return null;
         }

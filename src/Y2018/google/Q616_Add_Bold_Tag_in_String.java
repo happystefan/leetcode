@@ -21,7 +21,7 @@ public class Q616_Add_Bold_Tag_in_String {
         int pre = 0;
         StringBuilder sb = new StringBuilder();
         for (Interval interval : intervals) {
-            sb.append(s.substring(pre, interval.start));
+            sb.append(s, pre, interval.start);
             sb.append("<b>" + s.substring(interval.start, interval.end) + "</b>");
             pre = interval.end;
         }

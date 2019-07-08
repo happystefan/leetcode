@@ -11,7 +11,7 @@ public class Q824_Goat_Latin {
                 s = s + "ma";
             } else {
                 char first = s.charAt(0);
-                s = s.substring(1, s.length());
+                s = s.substring(1);
                 s = s + first + "ma";
             }
             s += suffix;
@@ -23,10 +23,7 @@ public class Q824_Goat_Latin {
 
     private boolean beginWithVowel(String s) {
         char c = Character.toLowerCase(s.charAt(0));
-        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
-            return true;
-        }
-        return false;
+        return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
     }
 
 }

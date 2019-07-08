@@ -18,7 +18,7 @@ public class Q163_Missing_Ranges {
         return find(new_nums, 0, k - 1);
     }
 
-    private List<String> find(long nums[], int l, int r) {
+    private List<String> find(long[] nums, int l, int r) {
         List<String> result = new LinkedList<>();
         if (l > r) {
             return result;

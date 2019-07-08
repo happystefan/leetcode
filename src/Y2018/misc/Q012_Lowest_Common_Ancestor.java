@@ -62,11 +62,7 @@ public class Q012_Lowest_Common_Ancestor {
                 return root;
             } else if (l != null) {
                 return l;
-            } else if (r != null) {
-                return r;
-            } else {
-                return null;
-            }
+            } else return r;
         }
     }
 

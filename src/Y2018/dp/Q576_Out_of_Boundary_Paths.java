@@ -4,7 +4,7 @@ public class Q576_Out_of_Boundary_Paths {
 
     public int findPaths(int m, int n, int N, int x, int y) {
         int M = 1000000000 + 7;
-        int dp[][] = new int[m][n];
+        int[][] dp = new int[m][n];
         dp[x][y] = 1;
         int result = 0;
         for (int k = 0; k < N; k++) {

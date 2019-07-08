@@ -13,7 +13,7 @@ public class Q257_Binary_Tree_Paths {
 
     private void dfs(TreeNode root, String pre, List<String> ans) {
         if (root == null) return;
-        String cur = pre.equals("") ? String.valueOf(root.val) : pre + "->" + String.valueOf(root.val);
+        String cur = pre.equals("") ? String.valueOf(root.val) : pre + "->" + root.val;
         if (root.left == null && root.right == null) {
             ans.add(cur);
             return;

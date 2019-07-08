@@ -13,7 +13,7 @@ public class Q535_Encode_and_Decode_TinyURL {
         // Encodes a URL to a shortened URL.
         public String encode(String longUrl) {
             list.add(longUrl);
-            return host + String.valueOf(list.size() - 1);
+            return host + (list.size() - 1);
         }
 
         // Decodes a shortened URL to its original URL.

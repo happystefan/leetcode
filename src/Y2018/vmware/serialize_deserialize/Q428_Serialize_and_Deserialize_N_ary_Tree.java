@@ -19,8 +19,6 @@ public class Q428_Serialize_and_Deserialize_N_ary_Tree {
         }
     }
 
-    ;
-
     class Codec {
 
         // Encodes a tree to a single string.
