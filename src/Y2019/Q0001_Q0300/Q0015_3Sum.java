@@ -57,7 +57,7 @@ public class Q0015_3Sum {
                     while (l < r && nums[r] == c) r--;
                 }
             }
-            while (i + 1 < nums.length && nums[i + 1] == a) i++;
+            while (i < nums.length && nums[i] == a) i++;
         }
         return result;
     }
