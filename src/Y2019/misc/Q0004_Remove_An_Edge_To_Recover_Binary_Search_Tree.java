@@ -2,12 +2,6 @@ package Y2019.misc;
 
 public class Q0004_Remove_An_Edge_To_Recover_Binary_Search_Tree {
 
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-    }
-
     public void removeAnEdgeToRecoverBinarySearchTree(TreeNode root) {
         dfs(root, Long.MIN_VALUE, Long.MAX_VALUE);
     }
@@ -28,6 +22,12 @@ public class Q0004_Remove_An_Edge_To_Recover_Binary_Search_Tree {
             }
             dfs(root.right, root.val, max);
         }
+    }
+
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
     }
 
 }

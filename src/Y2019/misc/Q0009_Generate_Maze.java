@@ -6,10 +6,6 @@ import java.util.List;
 
 public class Q0009_Generate_Maze {
 
-    class room {
-        boolean[] walls;
-    }
-
     // dirs: 0 - u; 1 - r; 2 - d; 3 - l
     int[][] dirs = new int[][]{{-1, 0}, {0, 1}, {1, 0}, {-1, 0}};
     int[] prev = new int[]{2, 3, 0, 1};
@@ -36,6 +32,10 @@ public class Q0009_Generate_Maze {
             maze[ii][jj].walls[d] = false;
             maze[i][j].walls[prev[d]] = false;
         }
+    }
+
+    class room {
+        boolean[] walls;
     }
 
 }

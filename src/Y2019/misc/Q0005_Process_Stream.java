@@ -2,11 +2,10 @@ package Y2019.misc;
 
 public class Q0005_Process_Stream {
 
+    String buffer = "";
+
     private void processData(byte[] data) {
     }
-
-
-    String buffer = "";
 
     /*
      *------------------------------------------------------------------------------------------------------------------

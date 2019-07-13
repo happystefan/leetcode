@@ -5,16 +5,6 @@ import java.util.List;
 
 public class Q0002_Reorder_Tree {
 
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-    }
-
     public TreeNode reorderTree(TreeNode root, List<int[]> rules) {
         if (root == null) return null;
 
@@ -55,6 +45,16 @@ public class Q0002_Reorder_Tree {
         }
         if (root.left != null) dfs(allPaths, root.left, new LinkedList<>(path), 0);
         if (root.right != null) dfs(allPaths, root.right, new LinkedList<>(path), 1);
+    }
+
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int val) {
+            this.val = val;
+        }
     }
 
 }

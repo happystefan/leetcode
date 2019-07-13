@@ -2,15 +2,6 @@ package Y2019.Q0001_Q0300;
 
 public class Q0021_Merge_Two_Sorted_Lists {
 
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode(0);
         ListNode curr = dummy;
@@ -27,6 +18,15 @@ public class Q0021_Merge_Two_Sorted_Lists {
         if (l1 != null) curr.next = l1;
         if (l2 != null) curr.next = l2;
         return dummy.next;
+    }
+
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
     }
 
 }

@@ -2,15 +2,6 @@ package Y2019.Q0001_Q0300;
 
 public class Q0019_Remove_Nth_Node_From_End_of_List {
 
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
@@ -22,6 +13,15 @@ public class Q0019_Remove_Nth_Node_From_End_of_List {
         }
         walker.next = walker.next == null ? null : walker.next.next;
         return dummy.next;
+    }
+
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
     }
 
 }

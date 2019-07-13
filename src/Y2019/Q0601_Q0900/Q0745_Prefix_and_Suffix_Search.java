@@ -8,12 +8,13 @@ public class Q0745_Prefix_and_Suffix_Search {
 
     class WordFilter {
 
-        class TrieNode {
-            TrieNode[] children = new TrieNode[26];
-            int idx;
+        TrieNode prefix_root = new TrieNode();
+        TrieNode suffix_root = new TrieNode();
 
-            public TrieNode() {
-                idx = -1;
+        public WordFilter(String[] words) {
+            for (int i = 0; i < words.length; i++) {
+                insert(prefix_root, words[i], i);
+                insert(suffix_root, new StringBuilder(words[i]).reverse().toString(), i);
             }
         }
 
@@ -43,21 +44,20 @@ public class Q0745_Prefix_and_Suffix_Search {
             for (TrieNode child : root.children) dfs(set, child);
         }
 
-        TrieNode prefix_root = new TrieNode();
-        TrieNode suffix_root = new TrieNode();
-
-        public WordFilter(String[] words) {
-            for (int i = 0; i < words.length; i++) {
-                insert(prefix_root, words[i], i);
-                insert(suffix_root, new StringBuilder(words[i]).reverse().toString(), i);
-            }
-        }
-
         public int f(String prefix, String suffix) {
             Set<Integer> a = search(prefix_root, prefix);
             Set<Integer> b = search(suffix_root, new StringBuilder(suffix).reverse().toString());
             a.retainAll(b);
             return a.isEmpty() ? -1 : Collections.max(a);
+        }
+
+        class TrieNode {
+            TrieNode[] children = new TrieNode[26];
+            int idx;
+
+            public TrieNode() {
+                idx = -1;
+            }
         }
 
     }

@@ -5,12 +5,6 @@ import java.util.Set;
 
 public class Q0003_Remove_An_Edge_To_Recover_Binary_Tree {
 
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-    }
-
     public void removeAnEdgeToRecoverBinaryTree(TreeNode root) {
         Set<TreeNode> visited = new HashSet<>();
         dfs(root, visited);
@@ -29,6 +23,12 @@ public class Q0003_Remove_An_Edge_To_Recover_Binary_Tree {
         }
         dfs(root.left, visited);
         dfs(root.right, visited);
+    }
+
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
     }
 
 }

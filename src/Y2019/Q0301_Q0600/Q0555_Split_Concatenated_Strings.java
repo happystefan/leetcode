@@ -14,7 +14,7 @@ public class Q0555_Split_Concatenated_Strings {
                     sb.append(str.substring(k));
                     for (int j = i + 1; j < strs.length; j++) sb.append(strs[j]);
                     for (int j = 0; j < i; j++) sb.append(strs[j]);
-                    sb.append(str.substring(0, k));
+                    sb.append(str, 0, k);
                     result = max(result, sb.toString());
                 }
             }

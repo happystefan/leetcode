@@ -6,16 +6,6 @@ import java.util.List;
 
 public class Q0257_Binary_Tree_Paths {
 
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public List<String> binaryTreePaths(TreeNode root) {
         List<String> result = new LinkedList<>();
         if (root == null) return result;
@@ -31,6 +21,16 @@ public class Q0257_Binary_Tree_Paths {
         }
         if (root.left != null) dfs(result, root.left, new LinkedList<>(path));
         if (root.right != null) dfs(result, root.right, new LinkedList<>(path));
+    }
+
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
 
 }

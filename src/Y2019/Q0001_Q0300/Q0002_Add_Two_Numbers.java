@@ -2,15 +2,6 @@ package Y2019.Q0001_Q0300;
 
 public class Q0002_Add_Two_Numbers {
 
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode(0);
         ListNode curr = dummy;
@@ -39,6 +30,15 @@ public class Q0002_Add_Two_Numbers {
             }
         }
         return dummy.next;
+    }
+
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
     }
 
 }

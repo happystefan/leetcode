@@ -6,6 +6,24 @@ import java.util.Stack;
 
 public class Q0272_Closest_Binary_Search_Tree_Value_II {
 
+    public List<Integer> closestKValues(TreeNode root, double target, int k) {
+        Iterator prevIterator = new Iterator(root, target, true);
+        Iterator nextIterator = new Iterator(root, target, false);
+        List<Integer> result = new LinkedList<>();
+        while (k-- > 0) {
+            if (!prevIterator.hasNext()) {
+                result.add(nextIterator.next());
+            } else if (!nextIterator.hasNext()) {
+                result.add(prevIterator.next());
+            } else if (Math.abs(target - prevIterator.peek()) < Math.abs(target - nextIterator.peek())) {
+                result.add(prevIterator.next());
+            } else {
+                result.add(nextIterator.next());
+            }
+        }
+        return result;
+    }
+
     class TreeNode {
         int val;
         TreeNode left;
@@ -17,6 +35,9 @@ public class Q0272_Closest_Binary_Search_Tree_Value_II {
     }
 
     class Iterator {
+        private boolean isPrev;
+        private Stack<TreeNode> stack = new Stack<>();
+
         Iterator(TreeNode root, double target, boolean isPrev) {
             this.isPrev = isPrev;
             while (root != null) {
@@ -48,27 +69,6 @@ public class Q0272_Closest_Binary_Search_Tree_Value_II {
         public int peek() {
             return stack.peek().val;
         }
-
-        private boolean isPrev;
-        private Stack<TreeNode> stack = new Stack<>();
-    }
-
-    public List<Integer> closestKValues(TreeNode root, double target, int k) {
-        Iterator prevIterator = new Iterator(root, target, true);
-        Iterator nextIterator = new Iterator(root, target, false);
-        List<Integer> result = new LinkedList<>();
-        while (k-- > 0) {
-            if (!prevIterator.hasNext()) {
-                result.add(nextIterator.next());
-            } else if (!nextIterator.hasNext()) {
-                result.add(prevIterator.next());
-            } else if (Math.abs(target - prevIterator.peek()) < Math.abs(target - nextIterator.peek())) {
-                result.add(prevIterator.next());
-            } else {
-                result.add(nextIterator.next());
-            }
-        }
-        return result;
     }
 
 }

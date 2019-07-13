@@ -54,8 +54,7 @@ public class Q0681_Next_Closest_Time {
             int hh = num / 100;
             int mm = num % 100;
             if (hh >= 24) return true;
-            if (mm >= 60) return true;
-            return false;
+            return mm >= 60;
         });
         int result = nums.get(0);
         int min_diff = Integer.MAX_VALUE;

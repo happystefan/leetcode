@@ -2,11 +2,6 @@ package Y2019.misc;
 
 public class Q0008_Is_IP_in_CIDRs {
 
-    class TreeNode {
-        TreeNode left;
-        TreeNode right;
-    }
-
     public boolean isIPInCIDRs(int[] cidrs, int[] masks, int ip) {
         if (cidrs == null || cidrs.length == 0) return false;
         int n = cidrs.length;
@@ -44,6 +39,11 @@ public class Q0008_Is_IP_in_CIDRs {
             if (root.right == null) root.right = new TreeNode();
             insertPath(root.right, ss, i + 1, false);
         }
+    }
+
+    class TreeNode {
+        TreeNode left;
+        TreeNode right;
     }
 
 }

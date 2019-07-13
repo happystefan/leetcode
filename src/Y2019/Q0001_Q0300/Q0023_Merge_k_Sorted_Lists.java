@@ -4,15 +4,6 @@ import java.util.PriorityQueue;
 
 public class Q0023_Merge_k_Sorted_Lists {
 
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     public ListNode mergeKLists(ListNode[] lists) {
         PriorityQueue<ListNode> Q = new PriorityQueue<>((a, b) -> Integer.compare(a.val, b.val));
         for (ListNode list : lists) {
@@ -27,6 +18,15 @@ public class Q0023_Merge_k_Sorted_Lists {
             if (node.next != null) Q.add(node.next);
         }
         return dummy.next;
+    }
+
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
     }
 
 }

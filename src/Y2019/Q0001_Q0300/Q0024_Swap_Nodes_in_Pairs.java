@@ -3,15 +3,6 @@ package Y2019.Q0001_Q0300;
 
 public class Q0024_Swap_Nodes_in_Pairs {
 
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     /*
      *------------------------------------------------------------------------------------------------------------------
      *
@@ -56,6 +47,15 @@ public class Q0024_Swap_Nodes_in_Pairs {
         second.next = first;
         first.next = swapPairs(tail);
         return head;
+    }
+
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
     }
 
 }
