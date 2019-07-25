@@ -16,6 +16,14 @@ public class Q019_Morris_Traversal {
     }
 
     class Solution {
+
+        /*
+         *--------------------------------------------------------------------------------------------------------------
+         *
+         * in order traversal
+         *
+         *--------------------------------------------------------------------------------------------------------------
+         */
         public List<Integer> inOrder(TreeNode root) {
             List<Integer> result = new LinkedList<>();
             TreeNode curr = root;
@@ -40,6 +48,13 @@ public class Q019_Morris_Traversal {
             return result;
         }
 
+        /*
+         *--------------------------------------------------------------------------------------------------------------
+         *
+         * pre order
+         *
+         *--------------------------------------------------------------------------------------------------------------
+         */
         public List<Integer> preOrder(TreeNode root) {
             List<Integer> result = new LinkedList<>();
             TreeNode curr = root;
@@ -64,6 +79,13 @@ public class Q019_Morris_Traversal {
             return result;
         }
 
+        /*
+         *--------------------------------------------------------------------------------------------------------------
+         *
+         * post order traversal
+         *
+         *--------------------------------------------------------------------------------------------------------------
+         */
         public List<Integer> postOrder(TreeNode root) {
             List<Integer> result = new LinkedList<>();
             TreeNode dummy = new TreeNode(-1);
@@ -80,7 +102,7 @@ public class Q019_Morris_Traversal {
                         prev.right = curr;
                         curr = curr.left;
                     } else {
-                        add(result, curr.left, prev);
+                        visit(result, curr.left, prev);
                         prev.right = null;
                         curr = curr.right;
                     }
@@ -89,15 +111,40 @@ public class Q019_Morris_Traversal {
             return result;
         }
 
-        private void add(List<Integer> result, TreeNode from, TreeNode to) {
-            reverse(from, to);
-            TreeNode curr = to;
-            while (true) {
-                result.add(curr.val);
-                if (curr == from) break;
-                curr = curr.right;
+        private void visit(List<Integer> result, TreeNode from, TreeNode to) {
+            /*
+             *----------------------------------------------------------------------------------------------------------
+             *
+             * version 1: insert value by index
+             *
+             *----------------------------------------------------------------------------------------------------------
+             */
+            {
+                int i = 0;
+                while (true) {
+                    result.add(result.size() - i, from.val);
+                    if (from.val == to.val) break;
+                    from = from.right;
+                    i++;
+                }
             }
-            reverse(to, from);
+            /*
+             *----------------------------------------------------------------------------------------------------------
+             *
+             * version 2: reverse, visit, then reverse back
+             *
+             *----------------------------------------------------------------------------------------------------------
+             */
+            {
+                reverse(from, to);
+                TreeNode curr = to;
+                while (true) {
+                    result.add(curr.val);
+                    if (curr == from) break;
+                    curr = curr.right;
+                }
+                reverse(to, from);
+            }
         }
 
         private void reverse(TreeNode from, TreeNode to) {
@@ -111,6 +158,6 @@ public class Q019_Morris_Traversal {
                 if (head == to) break;
             }
         }
-    }
 
+    }
 }
