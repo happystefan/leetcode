@@ -62,4 +62,29 @@ public class Q0137_Single_Number_II {
 
     }
 
+    /*
+     *------------------------------------------------------------------------------------------------------------------
+     *
+     * solution 3
+     *
+     *------------------------------------------------------------------------------------------------------------------
+     */
+    class solution3 {
+
+        public int singleNumber(int[] nums) {
+            int one = 0;
+            int two = 0;
+            for (int num : nums) {
+                one ^= num;
+                int cry = ~one & num;
+                two ^= cry;
+                int msk = one & two;
+                one ^= msk;
+                two ^= msk;
+            }
+            return one;
+        }
+
+    }
+
 }
