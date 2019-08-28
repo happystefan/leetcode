@@ -41,7 +41,7 @@ public class Q0032_Longest_Valid_Parentheses {
     public int longestValidParentheses(String s) {
         if (s == null || s.length() == 0) return 0;
         String rs = new StringBuilder(s).reverse().toString();
-        return Math.max(longestValidParentheses(s.toCharArray(), '('),
+        return Math.max(longestValidParentheses(s.toCharArray(), ')'),
                 longestValidParentheses(rs.toCharArray(), '('));
     }
 
