@@ -31,6 +31,7 @@ public class Q0009_Generate_Maze {
             if (seen[ii][jj]) continue;
             maze[ii][jj].walls[d] = false;
             maze[i][j].walls[prev[d]] = false;
+            dfs(maze, ii, jj, seen);
         }
     }
 
