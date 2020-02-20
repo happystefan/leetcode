@@ -12,6 +12,7 @@ public class Q0009_Generate_Maze {
 
     public room[][] generateMaze(int n) {
         room[][] maze = new room[n][n];
+        for (int i = 0; i < n; i++) Arrays.fill(maze[i], true);
         dfs(maze, 0, 0, new boolean[n][n]);
         return maze;
     }
