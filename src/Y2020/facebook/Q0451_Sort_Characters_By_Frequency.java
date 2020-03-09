@@ -11,7 +11,7 @@ public class Q0451_Sort_Characters_By_Frequency {
         Collections.sort(ss, (a, b) -> map.get(b) - map.get(a));
         StringBuilder sb = new StringBuilder();
         for (char c : ss) {
-            for (int i = 0; i < map.get(c); i++) sb.append(c);
+            sb.append(("" + c).repeat(map.get(c)));
         }
         return sb.toString();
     }
