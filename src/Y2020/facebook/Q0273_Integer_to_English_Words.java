@@ -25,10 +25,10 @@ public class Q0273_Integer_to_English_Words {
         String rslt = "";
         if (num < ten) rslt = belowTen[num];
         else if (num < twenty) rslt = belowTwenty[num - 10];
-        else if (num < hundred) rslt = belowHundred[num / 10] + " " + numberToWords(num % 10);
+        else if (num < hundred) rslt = belowHundred[num / 10] + " " + toWords(num % 10);
         else if (num < thousand) rslt = toWords(num / hundred) + " Hundred " + toWords(num % hundred);
         else if (num < million) rslt = toWords(num / thousand) + " Thousand " + toWords(num % thousand);
-        else if (num < billion) rslt = toWords(num / million) + " Million  " + toWords(num % million);
+        else if (num < billion) rslt = toWords(num / million) + " Million " + toWords(num % million);
         else rslt = toWords(num / billion) + " Billion " + toWords(num % billion);
         return rslt.trim();
     }
