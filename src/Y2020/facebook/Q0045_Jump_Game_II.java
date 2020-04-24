@@ -29,7 +29,7 @@ public class Q0045_Jump_Game_II {
             while (r < nums.length - 1) {
                 int ll = r;
                 int rr = r;
-                for (int i = l; i <= r; i++) rr = Math.max(rr,i + nums[i]);
+                for (int i = l; i <= r; i++) rr = Math.max(rr, i + nums[i]);
                 l = ll;
                 r = rr;
                 rslt++;
