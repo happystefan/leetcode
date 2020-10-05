@@ -20,7 +20,7 @@ public class TODO_Q0708_Insert_into_a_Sorted_Circular_Linked_List {
     }
 
     public Node insert(Node head, int insertVal) {
-
+        return null;
     }
 
 }

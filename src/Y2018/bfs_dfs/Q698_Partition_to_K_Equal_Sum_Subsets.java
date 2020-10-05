@@ -20,6 +20,7 @@ public class Q698_Partition_to_K_Equal_Sum_Subsets {
             return true;
         }
         for (int i = 0; i < sums.length; i++) {
+            if (sums[i] == target) continue;
             if (sums[i] + nums[pos] > target) {
                 continue;
             }

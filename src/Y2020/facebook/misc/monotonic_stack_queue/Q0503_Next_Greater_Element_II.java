@@ -30,14 +30,4 @@ public class Q0503_Next_Greater_Element_II {
 
     }
 
-    class solution_better_space {
-
-        public int[] nextGreaterElements(int[] nums) {
-            if (nums == null || nums.length == 0) return new int[0];
-
-
-        }
-
-    }
-
 }

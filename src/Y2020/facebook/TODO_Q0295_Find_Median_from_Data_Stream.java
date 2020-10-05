@@ -14,7 +14,7 @@ public class TODO_Q0295_Find_Median_from_Data_Stream {
         }
 
         public double findMedian() {
-
+            return 0;
         }
     }
 

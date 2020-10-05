@@ -44,18 +44,19 @@ class Q001_Divide_Array {
 
         while (removed.size() != nums.length) {
             for (Set<Integer> set : zero_sum_set) {
-                Set<Integer> intersect = new HashSet<>(set);
-                intersect.retainAll(removed);
-                if (intersect.size() != 0) {
-                    continue;
-                }
+
+                // if set contains any elements is already removed, not consider it
+                if (!Collections.disjoint(set, removed)) continue;
+
                 removed.addAll(set);
                 remaining.removeAll(set);
+
                 List<Integer> list = new LinkedList<>();
                 for (int i : set) {
                     list.add(nums[i]);
                 }
                 result.add(list);
+
                 if (set.size() * 2 > remaining.size()) {
                     list = new LinkedList<>();
                     for (int i : remaining) {
